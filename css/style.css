@@ -1,0 +1,692 @@
+:root {
+  --gradient: linear-gradient(90deg, #00a385, #00a385);
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  /* text-transform: capitalize; */
+  transition: all 0.4s linear;
+}
+
+*::selection {
+  background: white;
+  color: #000;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: url(../images/main\ background.jpg) no-repeat;
+}
+
+section {
+  padding: 0 7%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.btn {
+  padding: 0.6rem 3rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  background: var(--gradient);
+  color: #fff;
+}
+
+.btn:hover {
+  background: #fff;
+  color: aqua;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #000;
+  padding: 1rem;
+  padding-top: 8.5rem;
+  width: 50rem;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--gradient);
+  z-index: 1000;
+  padding: 2rem 7%;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+header .navbar ul li a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: #fff;
+  position: relative;
+}
+
+header .navbar ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  height: 0.2rem;
+  width: 0%;
+  background: #fff;
+  transition: 0.2s linear;
+}
+
+header .navbar ul li a:active::before,
+header .navbar ul li a:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+header #menu {
+  font-size: 3rem;
+  color: #000;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding-top: 15rem;
+}
+
+.home .box-container {
+  min-height: 20vh;
+  padding-top: 6rem;
+  display: contents;
+  align-items: flex-start;
+  justify-content: start;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.home .box-container .box {
+  margin: 1.5rem;
+  padding: 3rem;
+  width: 50rem;
+  background: #00a385;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.home .box-container .box .images {
+  padding: 0rem;
+  flex: 1 1 50rem;
+  text-align: center;
+  padding-top: 7rem;
+  margin-inline-start: auto;
+  padding-bottom: none;
+}
+
+.home .box-container .box .images img {
+  height: 50vh;
+  padding-top: 20px;
+}
+
+.home .content {
+  padding-top: 7rem;
+  padding: 4rem;
+  flex: 1 1 40rem;
+  text-align: justify;
+  text-decoration-style: none;
+}
+
+.home .content h1 {
+  font-size: 4rem;
+  color: #000;
+}
+
+.Tentang {
+  min-height: 50vh;
+  /* display: flow-root; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #000;
+
+  padding: 20rem;
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+.footer {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #222;
+  text-align: center;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+.Tentang .footer .h1 .heading {
+  font-size: 4rem;
+  color: #000;
+  text-align: center;
+}
+
+.footer .box-container {
+  margin-top: 0pt;
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.footer .box-container .box {
+  text-align: center;
+  margin: 1.5rem;
+  padding: 1rem;
+  border: 2rem solid #fff;
+  width: 27rem;
+  border-radius: 10px;
+}
+
+.footer .box-container .box:hover {
+  background: var(--gradient);
+}
+
+.footer .box-container .box i {
+  height: 7rem;
+  width: 7rem;
+  line-height: 7rem;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.footer .box-container .box h3 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.footer .box-container .box p {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.cod {
+  border: #00a385;
+
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cod .box-container {
+  min-height: 100vh;
+  padding-top: 7rem;
+  padding: 2rem;
+  display: contents;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.cod .box-container .box {
+  margin: 1.5rem;
+  padding: 1rem;
+  width: 50rem;
+  background: #00a385;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.cod .box-container .box .image {
+  padding: 1rem;
+}
+
+.cod .box-container .box .image img {
+  padding: 0 3rem;
+  width: 20rem;
+  border-left: 0.1rem solid #ccc;
+}
+
+.cod .box-container .box .content {
+  padding: 3rem;
+}
+
+.cod .box-container .box .content h3 {
+  font-size: 3rem;
+  color: #eee;
+}
+
+.cod .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+.Tentang .box-container .box:hover {
+  background: var(--gradient);
+}
+
+.Layanan {
+  min-height: 50vh;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #000;
+  flex-wrap: wrap;
+  padding: 10rem;
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+.Layanan h1 {
+  text-align: center;
+}
+.Layanan p {
+  text-align: center;
+}
+
+.row {
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flow-root;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+}
+
+.Layanan .image {
+  padding-top: 10rem;
+  flex: content;
+  justify-content: center;
+  text-align: center;
+  background: none;
+}
+
+.Layanan .image img {
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  border-radius: 0.5rem;
+}
+
+.row .content {
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  font-size: 1 1 45rem;
+  padding: 3rem;
+}
+
+.content .box {
+  margin: 3rem;
+  padding: 2rem;
+  width: 50rem;
+  background: #00a385;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  border-radius: 10px;
+}
+
+.row h3 {
+  font-size: 3.5rem;
+  color: #000;
+}
+
+.row p {
+  text-align: start;
+  font-size: 1.8rem;
+  color: #000;
+  padding: 1rem 0;
+}
+
+.row p i {
+  text-align: start;
+  padding-right: 0.5rem;
+  color: #637cbb;
+}
+
+.row .content p i .box p {
+  border: #00a385;
+  text-align: start;
+  font-size: 1rem;
+  color: #000;
+}
+
+.testimoni {
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.footer {
+  background: #222;
+  text-align: center;
+}
+
+.footer .image {
+  padding: 1rem;
+}
+
+.footer.image img {
+  padding: 0 3rem;
+  width: 1rem;
+  border: 20px;
+  text-align: center;
+}
+
+.footer .content {
+  text-align: center;
+  font-size: 1 1 45rem;
+  padding: 0rem;
+}
+
+.footer .content h3 {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.footer .content p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.contact {
+  background: url(../images/main\ background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact form {
+  flex: 1 1 40rem;
+  background: #444;
+  padding: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.contact form .box {
+  height: 5rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 0.1rem solid #eee;
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #fff;
+  text-transform: none;
+}
+
+.contact form textarea {
+  height: 15rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 0.1rem solid #ccc;
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #fff;
+  text-transform: none;
+  resize: none;
+}
+
+.contact form .box::placeholder,
+.contact form textarea::placeholder {
+  text-transform: capitalize;
+}
+
+.contact form .box:focus,
+.contact form textarea:focus {
+  border-radius: #637cbb;
+}
+
+.contact form .btn {
+  width: 100%;
+}
+
+.contact .content {
+  flex: 1 1 40rem;
+  padding: 4rem;
+}
+
+.contact .content h3 {
+  margin-left: 10rem;
+  font-size: 3rem;
+  color: #000;
+}
+
+.contact .content p {
+  font-size: 2rem;
+  color: #000;
+  padding: 1rem 0;
+  margin-left: 10rem;
+}
+
+.contact .content .icons {
+  font-size: 2rem;
+  color: #637cbb;
+  padding-right: 1rem;
+}
+
+.footer {
+  background: #222;
+  text-align: center;
+}
+
+/* .footer {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #222;
+  text-align: center;
+  padding: 1rem;
+  margin: 0rem;
+} */
+
+.footer .image {
+  padding: 3rem;
+}
+
+.footer {
+  background: #222;
+  text-align: center;
+}
+
+.footer .image {
+  padding: 1rem;
+}
+
+.footer.image img {
+  padding: 0 5rem;
+  width: 1rem;
+  border: 20px;
+  text-align: center;
+}
+
+.footer .content {
+  text-align: center;
+  font-size: 1 1 45rem;
+  padding: 0rem;
+}
+
+.footer .content h3 {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.footer .content p {
+  font-size: 2rem;
+  color: #fff;
+}
+.home .content h3 {
+  font-size: 1.7rem;
+  color: #000;
+}
+
+.home .content h4 {
+  font-size: 1.7rem;
+  color: #000;
+}
+
+.home .content p {
+  font-size: 1.7rem;
+  color: rgb(0, 0, 0);
+  padding: 1rem 0;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  header #menu {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+  }
+
+  header .navbar ul {
+    flex-flow: column;
+    padding: 2rem;
+  }
+
+  header .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  header .navbar ul li a {
+    display: block;
+    background: var(--gradient);
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 2.5rem;
+    z-index: 0;
+  }
+
+  header .navbar ul li a::before {
+    height: 100%;
+    bottom: 0;
+    z-index: -1;
+    background: #333;
+  }
+
+  fa-times {
+    transform: rotate(180deg);
+  }
+
+  header .navbar.nav-toggle {
+    top: 7.4rem;
+  }
+
+  .contact .content {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home .content h1 {
+    font-size: 1rem;
+  }
+
+  .home.content {
+    text-align: center;
+  }
+
+  .Tentang .row .image {
+    display: none;
+  }
+
+  .home .image img {
+    height: auto;
+  }
+
+  .heading {
+    width: auto;
+  }
+}
